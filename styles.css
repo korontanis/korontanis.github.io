@@ -6,7 +6,7 @@ body {
     background-color: antiquewhite;
 }
 header{
-    height: fit-content;
+    height: 250px;
     width: 100%;
     min-height: 250px;  /* Ensure a minimum height */
     background-color: #333;
