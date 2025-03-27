@@ -1,0 +1,222 @@
+[
+  {
+    "type": "inproceedings",
+    "citation_key": "korontanis2020inter",
+    "title": "Inter-operability and orchestration in heterogeneous cloud/edge resources: The accordion vision",
+    "author": [
+      "Korontanis, Ioannis",
+      "Tserpes, Konstantinos",
+      "Pateraki, Maria",
+      "Blasi, Lorenzo",
+      "Violos, John",
+      "Diego, Ferran",
+      "Marin, Eduard",
+      "Kourtellis, Nicolas",
+      "Coppola, Massimo",
+      "Carlini, Emanuele",
+      "others"
+    ],
+    "conference": "Proceedings of the 1st Workshop on Flexible Resource and Application Management on the Edge",
+    "pages": "9--14",
+    "year": 2020
+  },
+  {
+    "type": "article",
+    "citation_key": "carlini2023smartorc",
+    "title": "SmartORC: smart orchestration of resources in the compute continuum",
+    "author": [
+      "Carlini, Emanuele",
+      "Coppola, Massimo",
+      "Dazzi, Patrizio",
+      "Ferrucci, Luca",
+      "Kavalionak, Hanna",
+      "Korontanis, Ioannis",
+      "Mordacchini, Matteo",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "Frontiers in High Performance Computing",
+    "volume": 1,
+    "pages": "1164915",
+    "year": 2023,
+    "publisher": "Frontiers Media SA"
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "korontanis2023real",
+    "title": "Real-time monitoring and analysis of edge and cloud resources",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Theodoropoulos, Theodoros",
+      "Tserpes, Konstantinos"
+    ],
+    "conference": "Proceedings of the 3rd Workshop on Flexible Resource and Application Management on the Edge",
+    "pages": "13--18",
+    "year": 2023
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "theodoropoulos2023greenkube",
+    "title": "Greenkube: Towards greener container orchestration using artificial intelligence",
+    "author": [
+      "Theodoropoulos, Theodoros",
+      "Makris, Antonios",
+      "Korontanis, Ioannis",
+      "Tserpes, Konstantinos"
+    ],
+    "conference": "2023 IEEE International Conference on Service-Oriented System Engineering (SOSE)",
+    "pages": "135--139",
+    "year": 2023,
+    "organization": "IEEE"
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "makris2023streamlining",
+    "title": "Streamlining xr application deployment with a localized docker registry at the edge",
+    "author": [
+      "Makris, Antonios",
+      "Psomakelis, Evangelos",
+      "Korontanis, Ioannis",
+      "Theodoropoulos, Theodoros",
+      "Protopsaltis, Antonis",
+      "Pateraki, Maria",
+      "Ledwoń, Zbyszek",
+      "Diou, Christos",
+      "Anagnostopoulos, Dimosthenis",
+      "Tserpes, Konstantinos"
+    ],
+    "conference": "European conference on service-oriented and cloud computing",
+    "pages": "188--202",
+    "year": 2023,
+    "organization": "Springer Nature Switzerland Cham"
+  },
+  {
+    "type": "article",
+    "citation_key": "korontanis2024edgecloud",
+    "title": "EdgeCloud Mon: A lightweight monitoring stack for K3s clusters",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "SoftwareX",
+    "volume": 26,
+    "pages": "101675",
+    "year": 2024,
+    "publisher": "Elsevier"
+  },
+  {
+    "type": "article",
+    "citation_key": "korontanis2024survey",
+    "title": "A survey on modeling languages for applications hosted on cloud-edge computing environments",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "Applied Sciences",
+    "volume": 14,
+    "number": 6,
+    "pages": "2311",
+    "year": 2024,
+    "publisher": "MDPI"
+  },
+  {
+    "type": "article",
+    "citation_key": "korontanis2024streamk3s",
+    "title": "StreamK3s: A K3s-Based Data Stream Processing Platform for Simplifying Pipeline Creation, Deployment, and Scaling",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Kontogiannis, Alexandros",
+      "Varlamis, Iraklis",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "SoftwareX",
+    "volume": 27,
+    "pages": "101786",
+    "year": 2024,
+    "publisher": "Elsevier"
+  },
+  {
+    "type": "article",
+    "citation_key": "makris2024edge",
+    "title": "Edge-driven Docker registry: facilitating XR application deployment",
+    "author": [
+      "Makris, Antonios",
+      "Psomakelis, Evangelos",
+      "Korontanis, Ioannis",
+      "Theodoropoulos, Theodoros",
+      "Kontopoulos, Ioannis",
+      "Pateraki, Maria",
+      "Diou, Christos",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "Computing",
+    "volume": 106,
+    "number": 11,
+    "pages": "3479--3501",
+    "year": 2024,
+    "publisher": "Springer Vienna Vienna"
+  },
+  {
+    "type": "article",
+    "citation_key": "korontanis2024converter",
+    "title": "Converter: A ceaml reasoner python package to streamline orchestration across cloud and edge continuum",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "arXiv preprint arXiv:2407.00012",
+    "year": 2024
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "makris2024optimizing",
+    "title": "Optimizing Resource Allocation in the Edge: A Minimum Weighted Vertex Cover Approach",
+    "author": [
+      "Makris, Antonios",
+      "Maragkoudakis, Emmanouil",
+      "Kontopoulos, Ioannis",
+      "Theodoropoulos, Theodoros",
+      "Korontanis, Ioannis",
+      "Carlini, Emanuele",
+      "Mordacchini, Matteo",
+      "Dazzi, Patrizio",
+      "Varvarigou, Theodora"
+    ],
+    "conference": "Proceedings of the 4th Workshop on Flexible Resource and Application Management on the Edge",
+    "pages": "15--22",
+    "year": 2024
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "makris2024efficient",
+    "title": "An Efficient Storage Solution for Cloud/Edge Computing Infrastructures",
+    "author": [
+      "Makris, Antonios",
+      "Korontanis, Ioannis",
+      "Psomakelis, Evangelos",
+      "Tserpes, Konstantinos"
+    ],
+    "conference": "2024 IEEE International Conference on Service-Oriented System Engineering (SOSE)",
+    "pages": "92--101",
+    "year": 2024,
+    "organization": "IEEE"
+  },
+  {
+    "type": "article",
+    "citation_key": "korontanis2024ceaml",
+    "title": "Ceaml: A novel modeling language for enabling cloud and edge continuum orchestration",
+    "author": [
+      "Korontanis, Ioannis",
+      "Makris, Antonios",
+      "Tserpes, Konstantinos"
+    ],
+    "journal": "Software and Systems Modeling",
+    "pages": "1--19",
+    "year": 2024,
+    "publisher": "Springer"
+  }
+]

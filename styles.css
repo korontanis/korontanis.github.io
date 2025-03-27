@@ -1,0 +1,133 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+ 
+    background-color: antiquewhite;
+}
+header{
+    height: 250px;
+    background-color: #333;
+}
+main {
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+/* Adding some content to show scrolling */
+.content {
+   
+    font-size: 12px;
+    text-align: justify;
+    margin-left:40px;
+}
+.custom-header {
+    
+    color: white;
+    display: flex; /* Enables flexbox */
+    align-items: center;
+    gap: 50px /* Aligns image and text vertically */
+    /*background-image: url('images/compass.jpg');
+    background-size: cover;
+    background-position: center;*/
+}
+
+.profile {
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 120px;
+    height: 145px;
+    border-radius: 100px;
+    transform: scale(1.5); /* Zooms in 1.5x */
+   
+}
+
+.header-diamond-list {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0px; /* Adds some padding for better alignment */
+}
+
+.header-diamond-list li {
+    position: relative;
+    padding-left: 20px; /* Leaves space for the diamond bullet */
+    font-size: 15px;
+    padding-top: 8px;
+}
+
+.header-diamond-list li::before {
+    content: '❖'; /* Unicode character for diamond */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px; /* Size of the diamond */
+    color: #ffffff; /* Diamond color */
+}
+.main-diamond-list {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0px; /* Adds some padding for better alignment */
+}
+
+.main-diamond-list li {
+    position: relative;
+    padding-left: 20px; /* Leaves space for the diamond bullet */
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+.main-diamond-list li::before {
+    content: '❖'; /* Unicode character for diamond */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px; /* Size of the diamond */
+    color: #000000; /* Diamond color */
+}
+
+.social-media {
+    display: flex;          /* Makes items align horizontally */
+    align-items: center;    /* Centers them vertically */
+    gap: 10px;              /* Adds space between text and icon */
+    font-size: 14px;
+}
+
+.linkedin-icon {
+    font-size: 20px;  /* Adjust size */
+    color: white;     /* Makes icon white */
+    text-decoration: none;
+   
+}
+
+.project {
+    font-weight: bold;
+}
+
+.date {
+    color: #333;
+    font-size: 10px;
+    display: block;
+}
+
+.project-link{
+    color: #333;
+    font-size: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+
+#references-list li {
+    font-size: 12px;
+   
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

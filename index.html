@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ioannis Korontanis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="custom-header">
+            <img src="images/profile.jpg" alt="profile" class="profile">
+            <div class="main-info">
+                <h1>Ioannis Korontanis</h1>
+                <ul class="header-diamond-list">
+                    <li>PhD candidate at Harokopio University of Athens</li>
+                    <li>Junior Researcher at National Technical University of Athens</li>
+                </ul>
+                <div class="social-media">
+                    <p>LinkedIn Account</p>
+                    <a href="https://www.linkedin.com/in/ioannis-korontanis-520428117/" target="_blank" class="linkedin-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div> <!-- Closing the main-info div here -->
+        </div> <!-- Closing the custom-header div here -->
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="bio">
+                <h2>Bio</h2>
+                <p>Ioannis Korontanis (male) is currently a Ph.D. candidate at the Department of Informatics and Telematics of Harokopio University of Athens. He received his BSc from the Department of Computer Science and Engineering of Technological Education Institute of Thessaly. He received his MSc “Web Technologies and Applications” at the Department of Informatics and Telematics of Harokopio University of Athens. The topic of his PhD thesis is “Computer Infrastructure Models and Optimal Resource Orchestration”. His main research interests include distributed and real-time processing, cloud modelling languages & application models in Cloud & Edge, Cloud & Edge monitoring systems, CI/CD, DevOps and MLOps.</p>
+            </div>
+            <div>
+                <h2>EU Projects Participation</h2>
+                <ul class="main-diamond-list">
+                    <li><span class="project">ACCORDION</span>
+                        <span class="date">start date: Jan 2020</span>
+                        <span class="date">end date: Dec 2022</span></li>       
+                    <li><span class="project">SmartShip</span> 
+                        <span class="date">start date: Oct 2021</span>
+                        <span class="date">end date: Feb 2022</span> </li>
+                    <li><span class="project">RELEVIUM</span> 
+                        <span class="date">start date: Mar 2023</span>
+                        <span class="date">end date: Dec 2024</span></li>
+                    <li><span class="project">PANDORA</span> 
+                        <span class="date">start date: Jul 2024 </span>
+                        <span class="date">end date: Ongoing</span></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Publications</h2>
+                <ul id="references-list" class="main-diamond-list"></ul>
+            </div>  
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+    <script>
+        // Fetch JSON data from the external file
+        fetch('publications/publications.json')
+          .then(response => response.json()) // Parse JSON response
+          .then(data => createList(data)) // Call function to generate the list
+          .catch(error => console.error('Error loading the JSON file:', error));
+    
+        // Function to convert JSON to UL
+        function createList(data) {
+          const ul = document.getElementById('references-list');
+          data.forEach(item => {
+            const li = document.createElement('li');
+            let content = `<strong>${item.title}</strong><br>`;
+    
+            // Adding author list
+            content += `<em>Authors: </em>${item.author.join(', ')}<br>`;
+    
+            if (item.conference) {
+              content += `<em>Conference: </em>${item.conference}<br>`;
+            }
+            if (item.journal) {
+              content += `<em>Journal: </em>${item.journal}<br>`;
+            }
+            if (item.volume) {
+              content += `<em>Volume: </em>${item.volume}<br>`;
+            }
+            if (item.pages) {
+              content += `<em>Pages: </em>${item.pages}<br>`;
+            }
+            if (item.year) {
+              content += `<em>Year: </em>${item.year}<br>`;
+            }
+            if (item.publisher) {
+              content += `<em>Publisher: </em>${item.publisher}<br>`;
+            }
+    
+            li.innerHTML = content;
+            ul.appendChild(li);
+          });
+        }
+      </script>
+
+</body>
+</html>
