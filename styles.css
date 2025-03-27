@@ -7,7 +7,8 @@ body {
 }
 header{
     height: fit-content;
-    width: fit-content;
+    width: 100%;
+    min-height: 250px;  /* Ensure a minimum height */
     background-color: #333;
 }
 main {
@@ -133,46 +134,3 @@ footer {
     width: 100%;
 }
 
-/* Responsive design for mobile screens */
-@media (max-width: 768px) {
-    /* Adjust header layout for mobile */
-    header {
-        padding: 10px;
-    }
-
-    header .custom-header {
-        display: block;  /* Stack the content vertically on mobile */
-        text-align: center;
-    }
-
-    header .profile {
-        width: 80px;  /* Smaller profile image on mobile */
-        height: 80px;
-        margin: 0 auto 10px;  /* Center and add space below */
-    }
-
-    header .main-info {
-        padding: 0;
-    }
-
-    header .header-diamond-list {
-        font-size: 0.9em; /* Slightly smaller text for mobile */
-        margin: 10px 0;
-    }
-
-    header .social-media {
-        margin-top: 10px;
-    }
-}
-
-/* Even smaller screens like phones in portrait mode */
-@media (max-width: 480px) {
-    header .profile {
-        width: 60px;
-        height: 60px;
-    }
-
-    header .header-diamond-list {
-        font-size: 0.8em;
-    }
-}
