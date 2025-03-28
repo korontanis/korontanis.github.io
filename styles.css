@@ -145,12 +145,6 @@ footer {
     width: 100%;
 }
 
-
-.fancy-highlight {
-    font-style: italic;
-    font-weight: 700;
-    background: linear-gradient(to right, #ffcc00, #ff6600);
-    padding: 3px 6px;
-    border-radius: 5px;
-    color: white;
+h2{
+    text-decoration: underline;
 }
