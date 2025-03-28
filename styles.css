@@ -93,7 +93,7 @@ main {
     font-size: 14px;
 }
 
-.linkedin-icon {
+.icon {
     font-size: 20px;  /* Adjust size */
     color: white;     /* Makes icon white */
     text-decoration: none;
@@ -133,3 +133,12 @@ footer {
     width: 100%;
 }
 
+
+.fancy-highlight {
+    font-style: italic;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffcc00, #ff6600);
+    padding: 3px 6px;
+    border-radius: 5px;
+    color: white;
+}
