@@ -93,7 +93,19 @@ main {
     font-size: 14px;
 }
 
-.icons {
+.linkedin-icon {
+    font-size: 20px;  /* Adjust size */
+    color: white;     /* Makes icon white */
+    text-decoration: none;
+   
+}
+.scholar-icon {
+    font-size: 20px;  /* Adjust size */
+    color: white;     /* Makes icon white */
+    text-decoration: none;
+   
+}
+.github-icon {
     font-size: 20px;  /* Adjust size */
     color: white;     /* Makes icon white */
     text-decoration: none;
