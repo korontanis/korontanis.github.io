@@ -24,6 +24,7 @@ main {
     font-size: 12px;
     text-align: justify;
     margin-left:40px;
+    margin-right: 40px;
 }
 .custom-header {
     color: white;
@@ -147,4 +148,8 @@ footer {
 
 h2{
     text-decoration: underline;
+}
+
+.bio {
+
 }
