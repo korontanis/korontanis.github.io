@@ -79,58 +79,49 @@
     
         // Function to convert JSON to UL
         function createList(data) {
-        const ul = document.getElementById('references-list');
+        const container = document.getElementById('references-list');
+        container.innerHTML = ''; // Clear existing content
 
-        // Step 1: Group publications by year
-        const groupedByYear = {};
-        data.forEach(item => {
-          const year = item.year || 'Unknown';
-          if (!groupedByYear[year]) {
-            groupedByYear[year] = [];
-          }
-          groupedByYear[year].push(item);
+        // Group publications by year
+        const grouped = {};
+        data.forEach(pub => {
+          const year = pub.year || 'Unknown';
+          if (!grouped[year]) grouped[year] = [];
+          grouped[year].push(pub);
         });
 
-        // Step 2: Sort the years in descending order
-        const sortedYears = Object.keys(groupedByYear).sort((a, b) => b - a);
+        // Sort years in descending order
+        const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
 
-        // Step 3: Create list per year
+        // Create HTML elements grouped by year
         sortedYears.forEach(year => {
-          const yearHeader = document.createElement('h3');
-          yearHeader.textContent = year;
-          ul.appendChild(yearHeader);
+          // Add year heading
+          const yearHeading = document.createElement('h3');
+          yearHeading.textContent = year;
+          container.appendChild(yearHeading);
 
+          // List of publications for the year
           const yearList = document.createElement('ul');
-          yearList.classList.add('year-publication-list');
+          yearList.classList.add('main-diamond-list');
 
-          groupedByYear[year].forEach(item => {
+          grouped[year].forEach(pub => {
             const li = document.createElement('li');
-            let content = `<strong>${item.title}</strong><br>`;
-            content += `<em>Authors: </em>${item.author.join(', ')}<br>`;
-
-            if (item.conference) {
-              content += `<em>Conference: </em>${item.conference}<br>`;
-            }
-            if (item.journal) {
-              content += `<em>Journal: </em>${item.journal}<br>`;
-            }
-            if (item.volume) {
-              content += `<em>Volume: </em>${item.volume}<br>`;
-            }
-            if (item.pages) {
-              content += `<em>Pages: </em>${item.pages}<br>`;
-            }
-            if (item.publisher) {
-              content += `<em>Publisher: </em>${item.publisher}<br>`;
-            }
-
-            li.innerHTML = content;
+            li.innerHTML = `
+              <strong>${pub.title}</strong><br>
+              <em>Authors: </em>${(pub.author || []).join(', ')}<br>
+              ${pub.conference ? `<em>Conference: </em>${pub.conference}<br>` : ''}
+              ${pub.journal ? `<em>Journal: </em>${pub.journal}<br>` : ''}
+              ${pub.volume ? `<em>Volume: </em>${pub.volume}<br>` : ''}
+              ${pub.pages ? `<em>Pages: </em>${pub.pages}<br>` : ''}
+              ${pub.publisher ? `<em>Publisher: </em>${pub.publisher}<br>` : ''}
+            `;
             yearList.appendChild(li);
           });
 
-          ul.appendChild(yearList);
+          container.appendChild(yearList);
         });
       }
+
 
       </script>
 
