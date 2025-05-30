@@ -160,7 +160,7 @@ h2 {
   width: 100%;
   min-width: 600px;
   max-width: 800px; /* optional: controls max width for aesthetics */
-  margin: 0 auto;
+
   box-sizing: border-box;
 }
 
