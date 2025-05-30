@@ -63,67 +63,88 @@
             </div>
             <div>
                 <h2>Publications</h2>
-                <ul id="references-list" class="main-diamond-list"></ul>
+                <!-- Filter bar -->
+                <div class="table-filter-bar">
+                  <label for="year-dropdown">Filter by year:</label>
+                  <select id="year-dropdown" class="year-dropdown">
+                    <option value="all">All</option>
+                  </select>
+                </div>
+                <!-- Publications table -->
+                <table id="publications-table">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Authors</th>
+                      <th>Venue</th>
+                      <th>Year</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
             </div>  
         </div>
     </main>
     <footer>
         <p>&copy; 2025</p>
     </footer>
-    <script>
-        // Fetch JSON data from the external file
-        fetch('publications/publications.json')
-          .then(response => response.json()) // Parse JSON response
-          .then(data => createList(data)) // Call function to generate the list
-          .catch(error => console.error('Error loading the JSON file:', error));
-    
-        // Function to convert JSON to UL
-        function createList(data) {
-        const container = document.getElementById('references-list');
-        container.innerHTML = ''; // Clear existing content
+  <script>
+  let allPublications = [];
 
-        // Group publications by year
-        const grouped = {};
-        data.forEach(pub => {
-          const year = pub.year || 'Unknown';
-          if (!grouped[year]) grouped[year] = [];
-          grouped[year].push(pub);
-        });
+  // Load publications
+  fetch('publications/publications.json')
+    .then(response => response.json())
+    .then(data => {
+      allPublications = data;
+      const years = [...new Set(data.map(pub => pub.year))].sort((a, b) => b - a);
+      createYearBar(years);
+      renderTable(data); // Show all by default
+    })
+    .catch(err => console.error('Error loading publications:', err));
 
-        // Sort years in descending order
-        const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
+  // Create year filter buttons
+  function createYearBar(years) {
+  const dropdown = document.getElementById('year-dropdown');
 
-        // Create HTML elements grouped by year
-        sortedYears.forEach(year => {
-          // Add year heading
-          const yearHeading = document.createElement('h3');
-          yearHeading.textContent = year;
-          container.appendChild(yearHeading);
+  // Add year options
+  years.forEach(year => {
+    const option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    dropdown.appendChild(option);
+  });
 
-          // List of publications for the year
-          const yearList = document.createElement('ul');
-          yearList.classList.add('main-diamond-list');
+  // Add change event listener
+  dropdown.addEventListener('change', () => {
+    const selected = dropdown.value;
+    if (selected === 'all') {
+      renderTable(allPublications);
+    } else {
+      renderTable(allPublications.filter(pub => pub.year == selected));
+    }
+  });
+  }
 
-          grouped[year].forEach(pub => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-              <strong>${pub.title}</strong><br>
-              <em>Authors: </em>${(pub.author || []).join(', ')}<br>
-              ${pub.conference ? `<em>Conference: </em>${pub.conference}<br>` : ''}
-              ${pub.journal ? `<em>Journal: </em>${pub.journal}<br>` : ''}
-              ${pub.volume ? `<em>Volume: </em>${pub.volume}<br>` : ''}
-              ${pub.pages ? `<em>Pages: </em>${pub.pages}<br>` : ''}
-              ${pub.publisher ? `<em>Publisher: </em>${pub.publisher}<br>` : ''}
-            `;
-            yearList.appendChild(li);
-          });
+  // Render publications in table
+  function renderTable(publications) {
+    const tbody = document.querySelector('#publications-table tbody');
+    tbody.innerHTML = ''; // Clear existing rows
 
-          container.appendChild(yearList);
-        });
-      }
+    publications.forEach(pub => {
+      const tr = document.createElement('tr');
 
+      tr.innerHTML = `
+        <td><strong>${pub.title}</strong></td>
+        <td>${pub.author.join(', ')}</td>
+        <td>${pub.journal || pub.conference || ''}</td>
+        <td>${pub.year || ''}</td>
+      `;
 
-      </script>
+      tbody.appendChild(tr);
+    });
+  }
+  </script>
+
 
 </body>
 </html>
