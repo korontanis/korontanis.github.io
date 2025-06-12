@@ -27,6 +27,7 @@ main {
     margin-right: 40px;
 }
 .custom-header {
+    width: 100%;
     color: white;
     display: flex; /* Enables flexbox */
  /* Aligns image and text vertically */
