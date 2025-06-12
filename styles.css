@@ -55,7 +55,7 @@ main {
 .header-diamond-list li {
     position: relative;
     padding-left: 20px; /* Leaves space for the diamond bullet */
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 8px;
 }
 
@@ -92,7 +92,7 @@ main {
     display: flex;          /* Makes items align horizontally */
     align-items: center;    /* Centers them vertically */
     gap: 10px;              /* Adds space between text and icon */
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .linkedin-icon {
