@@ -6,6 +6,7 @@ body {
     background-color: antiquewhite;
 }
 header{
+    width: max-content;
     height: fit-content;
     min-height: 250px;  /* Ensure a minimum height */
     background-color: #333;
@@ -28,7 +29,7 @@ main {
 .custom-header {
     color: white;
     display: flex; /* Enables flexbox */
-  
+    width: max-content;
     gap: 50px /* Aligns image and text vertically */
     /*background-image: url('images/compass.jpg');
     background-size: cover;
