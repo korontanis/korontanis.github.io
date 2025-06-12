@@ -2,14 +2,14 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
- 
     background-color: antiquewhite;
+    
 }
 header{
     width: max-content;
-    height: fit-content;
     min-height: 250px;  /* Ensure a minimum height */
     background-color: #333;
+    
 }
 main {
     height: auto;
@@ -29,11 +29,11 @@ main {
 .custom-header {
     color: white;
     display: flex; /* Enables flexbox */
-    width: max-content;
-    gap: 50px /* Aligns image and text vertically */
+ /* Aligns image and text vertically */
     /*background-image: url('images/compass.jpg');
     background-size: cover;
     background-position: center;*/
+    gap: 50px;
 }
 
 .profile {
@@ -241,4 +241,8 @@ h2 {
 .year-dropdown:focus {
   outline: none;
   border-color: #333;
+}
+
+.main-info{
+  width: max-content;
 }
