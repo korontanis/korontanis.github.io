@@ -166,8 +166,8 @@ h2 {
 }
 
 .publications-table thead th {
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #008080;
+  color: #33;
   text-align: left;
   padding: 12px;
 
@@ -223,6 +223,7 @@ h2 {
 /* Table styling */
 .publications-table {
   width: 100%;
+  border-style: ridge;
   border-left: 3px solid #333;
   border-right: 3px solid #333;
   border-bottom: 3px solid #333;
