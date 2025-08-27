@@ -21,7 +21,7 @@ main {
 /* Adding some content to show scrolling */
 .content {
    
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
     margin-left:40px;
     margin-right: 40px;
@@ -87,7 +87,7 @@ main {
 .main-diamond-list li {
     position: relative;
     padding-left: 20px; /* Leaves space for the diamond bullet */
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 8px;
 }
 
