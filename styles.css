@@ -26,6 +26,18 @@ main {
     margin-left:40px;
     margin-right: 40px;
 }
+.bio{    
+    margin-left:50px;
+    margin-right: 50px;
+}
+.eu-projects{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.publications{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .custom-header {
     width: 100%;
     color: white;
