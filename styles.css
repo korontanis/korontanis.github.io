@@ -1,156 +1,117 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
+/* Reset defaults */
+html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
     background-color: antiquewhite;
-    
-}
-header{
-    min-width: max-content;
-    min-height: 250px;  /* Ensure a minimum height */
-    background-color: #333;
-    
-}
-main {
-    height: auto;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 100px;
 }
 
-/* Adding some content to show scrolling */
-.content {
-   
-    font-size: 14px;
-    text-align: justify;
-    margin-left:40px;
-    margin-right: 40px;
+/* Header */
+header {
+    width: 100%;
+    min-height: 250px;
+    background-color: #333;
 }
-.bio{    
-    margin-left:50px;
-    margin-right: 50px;
-}
-.eu-projects{
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.publications{
-  margin-left: 50px;
-  margin-right: 50px;
-}
+
+/* Custom header container */
 .custom-header {
     width: 100%;
-    color: white;
-    display: flex; /* Enables flexbox */
- /* Aligns image and text vertically */
-    /*background-image: url('images/compass.jpg');
-    background-size: cover;
-    background-position: center;*/
-    gap: 50px;
+    display: flex;
+    flex-direction: column; /* stack vertically on mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Profile image */
 .profile {
-    margin-left: 40px;
-    margin-top: 40px;
     width: 120px;
-    height: 145px;
-    border-radius: 100px;
-    transform: scale(1.5); /* Zooms in 1.5x */
-   
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-.header-diamond-list {
-    list-style-type: none; /* Removes default bullets */
-    padding-left: 0px; /* Adds some padding for better alignment */
+/* Main info text */
+.main-info {
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    text-align: center; /* center text on mobile */
 }
 
-.header-diamond-list li {
-    position: relative;
-    padding-left: 20px; /* Leaves space for the diamond bullet */
-    font-size: 12px;
-    padding-top: 8px;
-}
-
-.header-diamond-list li::before {
-    content: '❖'; /* Unicode character for diamond */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 20px; /* Size of the diamond */
-    color: #ffffff; /* Diamond color */
-}
+/* Diamond lists */
+.header-diamond-list,
 .main-diamond-list {
-    list-style-type: none; /* Removes default bullets */
-    padding-left: 0px; /* Adds some padding for better alignment */
+    list-style: none;
+    padding-left: 0;
 }
 
+.header-diamond-list li,
 .main-diamond-list li {
     position: relative;
-    padding-left: 20px; /* Leaves space for the diamond bullet */
-    font-size: 14px;
+    padding-left: 25px;
     padding-top: 8px;
 }
 
+.header-diamond-list li::before,
 .main-diamond-list li::before {
-    content: '❖'; /* Unicode character for diamond */
+    content: '❖';
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 20px; /* Size of the diamond */
-    color: #000000; /* Diamond color */
+    font-size: 20px;
 }
 
+.header-diamond-list li::before { color: #fff; }
+.main-diamond-list li::before { color: #000; }
+
+/* Social media icons */
 .social-media {
-    display: flex;          /* Makes items align horizontally */
-    align-items: center;    /* Centers them vertically */
-    gap: 10px;              /* Adds space between text and icon */
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 12px;
 }
 
-.linkedin-icon {
-    font-size: 20px;  /* Adjust size */
-    color: white;     /* Makes icon white */
+.social-media a {
+    font-size: 20px;
+    color: white;
     text-decoration: none;
-   
-}
-.scholar-icon {
-    font-size: 20px;  /* Adjust size */
-    color: white;     /* Makes icon white */
-    text-decoration: none;
-   
-}
-.github-icon {
-    font-size: 20px;  /* Adjust size */
-    color: white;     /* Makes icon white */
-    text-decoration: none;
-   
 }
 
+/* Main content */
+main {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 120px; /* leave space for footer */
+}
+
+.content,
+.bio,
+.eu-projects,
+.publications {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+/* EU Projects */
 .project {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
-
 .date {
     color: #333;
     font-size: 12px;
     display: block;
 }
 
-.project-link{
-    color: #333;
-    font-size: 10px;
-    display: block;
-    text-decoration: none;
-}
-
-
-#references-list li {
-    font-size: 12px;
-   
-}
-
-
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -158,106 +119,136 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
+/* Headings */
 h2 {
     text-decoration: underline;
 }
 
-
-
-.year-toggle-btn:hover {
-  background-color: #dcdcdc;
+/* Publications table */
+.publications-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.publications-section {
-  width: 100%;
-  min-width: 600px;
-  max-width: 800px; /* optional: controls max width for aesthetics */
- 
-  box-sizing: border-box;
+.publications-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-left: 3px solid #333;
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    border-radius: 0 0 8px 8px;
 }
 
 .publications-table thead th {
-  background-color: #008080;
-  color: #33;
-  text-align: left;
-  padding: 12px;
-
+    background-color: #008080;
+    color: #fff;
+    text-align: left;
+    padding: 12px;
 }
 
 .publications-table tbody tr {
-  background-color: #f9f9f9;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .publications-table td {
-  padding: 12px;
-  vertical-align: top;
-  border-bottom: 1px solid #e0e0e0;
+    padding: 12px;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .publications-table td strong {
-  color: #2c3e50;
+    color: #2c3e50;
 }
 
 .publications-table td em {
-  color: #555;
-  font-style: italic;
+    color: #555;
+    font-style: italic;
 }
 
-.year-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 10px 0;
-}
-
-
-
-
-/* Filter bar */
+/* Table filter bar */
 .table-filter-bar {
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  border-top: 3px solid #333;
-  border-left: 3px solid #333;
-  border-right: 3px solid #333;
-  border-bottom: none;
-  background-color: #f9f9f9;
-  padding: 12px 16px;
-  font-size: 15px;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-/* Table styling */
-.publications-table {
-  width: 100%;
-  border-style: ridge;
-  border-left: 3px solid #333;
-  border-right: 3px solid #333;
-  border-bottom: 3px solid #333;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  box-sizing: border-box;
-  border-collapse: collapse;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-top: 3px solid #333;
+    border-left: 3px solid #333;
+    border-right: 3px solid #333;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0 0;
 }
 
 .year-dropdown {
-  margin-left: 10px;
-  font-size: 14px;
-  padding: 5px 10px;
-  height: fit-content;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    height: fit-content;
 }
 
 .year-dropdown:focus {
-  outline: none;
-  border-color: #333;
+    outline: none;
+    border-color: #333;
 }
 
-.main-info{
-  width: max-content;
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+    .social-media {
+        display: flex;
+        justify-content: center; /* center horizontally */
+        align-items: center;     /* center vertically within line */
+        gap: 10px;
+        font-size: 12px;
+        width: 100%;             /* take full width */
+    }
+    .custom-header {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .profile {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .main-info {
+        text-align: center;
+    }
+
+    .content,
+    .bio,
+    .eu-projects,
+    .publications {
+        padding: 0 15px;
+        margin: 0;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    .custom-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 50px;
+        padding: 20px 40px;
+    }
+
+    .main-info {
+        text-align: left;
+    }
+
+    .profile {
+        width: 150px;
+        height: auto;
+        margin-bottom: 0;
+    }
 }
