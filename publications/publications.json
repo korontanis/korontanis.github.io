@@ -218,5 +218,40 @@
     "pages": "1--19",
     "year": 2024,
     "publisher": "Springer"
+  },
+    {
+    "type": "inproceedings",
+    "citation_key": "10.1145/3770501.3771304",
+    "title": "Streamlining ML Training in Kubernetes: An MLOps Architecture with Kubeflow",
+    "author": [
+      "Korontanis Ioannis",
+      "Zacharia Athina",
+      "Makris Antonios",
+      "Pateraki Maria",
+      "Tserpes Konstantinos"
+    ],
+    "conference": "15th International Conference on the Internet of Things",
+    "pages": "267--270",
+    "year": 2025,
+    "publisher": "ACM"
+  },
+      {
+    "type": "inproceedings",
+    "citation_key": "10.1145/3770501.3770528",
+    "title": "PEPPER: Profiling-based Edge Placement and Partitioning for Deep Learning Execution",
+    "author": [
+      "Korontanis Ioannis",
+      "Kontopoulos Ioannis",
+      "Zacharia Athina",
+      "Makris Antonios",
+      "Chronis Christos",
+      "Pateraki Maria",
+      "Tserpes Konstantinos",
+      "Varlamis Iraklis"
+    ],
+    "conference": "15th International Conference on the Internet of Things",
+    "pages": "228-–236",
+    "year": 2025,
+    "publisher": "ACM"
   }
 ]
