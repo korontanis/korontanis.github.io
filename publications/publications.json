@@ -219,7 +219,7 @@
     "year": 2024,
     "publisher": "Springer"
   },
-    {
+  {
     "type": "inproceedings",
     "citation_key": "10.1145/3770501.3771304",
     "title": "Streamlining ML Training in Kubernetes: An MLOps Architecture with Kubeflow",
@@ -235,7 +235,7 @@
     "year": 2025,
     "publisher": "ACM"
   },
-      {
+  {
     "type": "inproceedings",
     "citation_key": "10.1145/3770501.3770528",
     "title": "PEPPER: Profiling-based Edge Placement and Partitioning for Deep Learning Execution",
@@ -253,5 +253,23 @@
     "pages": "228-–236",
     "year": 2025,
     "publisher": "ACM"
+  },
+    {
+    "type": "article",
+    "citation_key": "THEODOROPOULOS2026107926",
+    "title": "GraphOpticon: A Global proactive horizontal autoscaler for improved service performance & resource consumption",
+    "author": [
+    "Theodoropoulos Theodoros",
+    "Singh Patel Yashwant",
+    "Zdun Uwe",
+    "Townend Paul",
+    "Korontanis Ioannis",
+    "Makris Antonios",
+    "Tserpes Konstantinos"
+    ],
+    "journal": "Future Generation Computer Systems",
+    "pages": "107926",
+    "year": 2025,
+    "publisher": "Elsevier"
   }
 ]
