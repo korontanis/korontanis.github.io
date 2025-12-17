@@ -1,14 +1,15 @@
 let allPublications = [];
 
+// Load publications JSON
 fetch('publications/publications.json')
-  .then(res => res.json())
-  .then(data => {
-      allPublications = data;
-      const years = [...new Set(data.map(pub => pub.year))].sort((a,b) => b-a);
-      createYearButtons(years);
-      renderPublications(allPublications);
-  })
-  .catch(err => console.error('Error loading publications:', err));
+    .then(res => res.json())
+    .then(data => {
+        allPublications = data;
+        const years = [...new Set(data.map(pub => pub.year))].sort((a,b) => b-a);
+        createYearButtons(years);
+        renderPublications(allPublications);
+    })
+    .catch(err => console.error('Error loading publications:', err));
 
 function createYearButtons(years) {
     const container = document.querySelector('.year-buttons');
@@ -23,12 +24,13 @@ function createYearButtons(years) {
     });
 
     container.addEventListener('click', e => {
-        if (e.target.tagName === 'BUTTON') {
+        if(e.target.tagName === 'BUTTON') {
             document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
+
             const year = e.target.dataset.year;
-            if (year === 'all') renderPublications(allPublications);
-            else renderPublications(allPublications.filter(pub => pub.year == year));
+            const filtered = year === 'all' ? allPublications : allPublications.filter(pub => pub.year == year);
+            renderPublications(filtered);
         }
     });
 }

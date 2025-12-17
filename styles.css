@@ -1,4 +1,4 @@
-/* Reset and base */
+/* Reset & Base */
 html, body {
     margin: 0;
     padding: 0;
@@ -15,14 +15,11 @@ header {
 }
 
 .custom-header {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 .profile {
@@ -30,47 +27,31 @@ header {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
 .main-info {
     color: white;
-    width: 100%;
     max-width: 600px;
     text-align: center;
 }
 
-.header-diamond-list,
-.main-diamond-list {
+.header-diamond-list, .main-diamond-list {
     list-style: none;
     padding-left: 0;
-}
-
-.header-diamond-list li,
-.main-diamond-list li {
-    position: relative;
-    padding-left: 25px;
-    padding-top: 8px;
 }
 
 .header-diamond-list li::before,
 .main-diamond-list li::before {
     content: '❖';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 20px;
+    margin-right: 5px;
 }
-
-.header-diamond-list li::before { color: #fff; }
-.main-diamond-list li::before { color: #000; }
 
 .social-media {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 12px;
+    margin-top: 10px;
 }
 
 .social-media a {
@@ -82,8 +63,6 @@ header {
 /* Main content */
 main {
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 120px;
 }
 
 .content,
@@ -91,14 +70,19 @@ main {
 .eu-projects,
 .publications {
     margin: 0 auto;
-    padding: 0 20px;
     max-width: 900px;
-    text-align: justify;
 }
 
-.project { font-weight: bold; font-size: 15px; }
-.date { color: #333; font-size: 12px; display: block; }
+.project {
+    font-weight: bold;
+}
 
+.date {
+    font-size: 12px;
+    color: #333;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -106,16 +90,13 @@ footer {
     text-align: center;
 }
 
-/* Headings */
-h2 { text-decoration: underline; }
-
 /* Year buttons */
 .year-buttons-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .year-buttons-container p {
@@ -125,12 +106,12 @@ h2 { text-decoration: underline; }
 
 .year-btn {
     padding: 6px 14px;
-    border: 1px solid #008080;
     border-radius: 8px;
-    background-color: #fff;
+    border: 1px solid #008080;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.2s ease;
+    background-color: #fff;
+    transition: all 0.2s;
 }
 
 .year-btn:hover {
@@ -147,14 +128,6 @@ h2 { text-decoration: underline; }
 .publications-cards {
     display: grid;
     gap: 20px;
-    margin-top: 15px;
-}
-
-@media (min-width: 768px) {
-    .publications-cards { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 767px) {
-    .publications-cards { grid-template-columns: 1fr; }
 }
 
 .publication-card {
@@ -163,11 +136,26 @@ h2 { text-decoration: underline; }
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 .publication-card h3 {
     margin-top: 0;
     font-size: 16px;
 }
+
 .publication-card p {
     margin: 5px 0;
     font-size: 14px;
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+    .publications-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-header { gap: 15px; }
+    .profile { width: 100px; }
+    .main-info { text-align: center; }
 }
