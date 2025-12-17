@@ -20,17 +20,17 @@
                 <div class="social-media">
                     <p>Social Media</p>
                     <a href="https://www.linkedin.com/in/ioannis-korontanis-520428117/" target="_blank" class="linkedin-icon">
-                      <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a href="https://scholar.google.gr/citations?user=ayPpafkAAAAJ&hl=el" target="_blank" class="scholar-icon">
-                      <i class="fa-brands fa-google-scholar"></i> 
+                        <i class="fa-brands fa-google-scholar"></i> 
                     </a>
                     <a href="https://github.com/korontanis" target="_blank" class="github-icon">
-                      <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
-            </div> <!-- Closing the main-info div here -->
-        </div> <!-- Closing the custom-header div here -->
+            </div>
+        </div>
     </header>
 
     <main>
@@ -44,6 +44,7 @@
                 <p>Currently, he is working as a Junior Researcher in the <a href="https://ecl.ece.ntua.gr/">Efficient Computing Lab</a> of National Technical University of Athens. 
                   His main research interests include distributed and real-time processing, cloud modelling languages & application models in Cloud & Edge, Cloud & Edge monitoring systems, CI/CD, DevOps and MLOps.</p>
             </div>
+
             <div class="eu-projects">
                 <h2>EU Projects Participation</h2>
                 <ul class="main-diamond-list">
@@ -61,92 +62,24 @@
                         <span class="date">end date: Ongoing</span></li>
                 </ul>
             </div>
+
             <div class="publications">
                 <h2>Publications</h2>
-                <!-- Filter bar -->
                 <div class="publications-section">
-                <div class="table-filter-bar">
-                  <label for="year-dropdown">Filter by year:</label>
-                  <select id="year-dropdown" class="year-dropdown">
-                    <option value="all">All</option>
-                  </select>
+                    <div class="year-buttons-container">
+                        <p>Filter by year:</p>
+                        <div class="year-buttons"></div>
+                    </div>
+                    <div class="publications-cards"></div>
                 </div>
-                <!-- Publications table -->
-                <table class="publications-table">
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Authors</th>
-                      <th>Venue</th>
-                      <th>Year</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-                </div>
-            </div>  
+            </div>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2025</p>
     </footer>
-  <script>
-  let allPublications = [];
 
-  // Load publications
-  fetch('publications/publications.json')
-    .then(response => response.json())
-    .then(data => {
-      allPublications = data;
-      const years = [...new Set(data.map(pub => pub.year))].sort((a, b) => b - a);
-      createYearBar(years);
-      renderTable(data); // Show all by default
-    })
-    .catch(err => console.error('Error loading publications:', err));
-
-  // Create year filter buttons
-  function createYearBar(years) {
-  const dropdown = document.getElementById('year-dropdown');
-
-  // Add year options
-  years.forEach(year => {
-    const option = document.createElement('option');
-    option.value = year;
-    option.textContent = year;
-    dropdown.appendChild(option);
-  });
-
-  // Add change event listener
-  dropdown.addEventListener('change', () => {
-    const selected = dropdown.value;
-    if (selected === 'all') {
-      renderTable(allPublications);
-    } else {
-      renderTable(allPublications.filter(pub => pub.year == selected));
-    }
-  });
-  }
-
-  // Render publications in table
-  function renderTable(publications) {
-    const tbody = document.querySelector('.publications-table tbody');
-    tbody.innerHTML = ''; // Clear existing rows
-
-    publications.forEach(pub => {
-      const tr = document.createElement('tr');
-
-      tr.innerHTML = `
-        <td><strong>${pub.title}</strong></td>
-        <td>${pub.author.join(', ')}</td>
-        <td>${pub.journal || pub.conference || ''}</td>
-        <td>${pub.year || ''}</td>
-      `;
-
-      tbody.appendChild(tr);
-    });
-  }
-  </script>
-
-
+    <script src="publications.js"></script>
 </body>
 </html>
