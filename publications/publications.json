@@ -271,5 +271,20 @@
     "pages": "107926",
     "year": 2025,
     "publisher": "Elsevier"
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "10.1145/3774901.3778062",
+    "title": "The role of energy consumption prediction in Green Orchestration",
+    "author": [
+    "Korontanis Ioannis",
+    "Kontopoulos Ioannis",
+    "Tserpes Konstantinos",
+    "Varlamis Iraklis"
+    ],
+    "conference": "Middleware for Autonomous AIoT Systems in the Computing Continuum",
+    "pages": "1-6",
+    "year": 2025,
+    "publisher": "ACM"
   }
 ]
