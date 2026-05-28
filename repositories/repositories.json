@@ -3,5 +3,24 @@
     "name": "Converter",
     "description": "Converter is a reasoning tool designed for the cloud language known as CEAML. CEAML is an extension of TOSCA capable to describe deployment and runtime adaptation for platforms that utilize both Cloud and Edge resources. It can parse CEAML entities and translate them into configuration files for K3s or Kubevirt. Additionally, it generates action models, workflow models, and matchmaking models that can simplify deployment and runtime adaptation for distributed orchestrators across multiple K3s clusters. CEAML and Converter have been utilized by the ACCORDION EU project to aid the orchestrator and lifecycle manager of the system.",
     "url": "https://github.com/Efficient-Computing-Lab/Converter"
-  }
+  },
+  {"name":"StreamK3s",
+   "description": "StreamK3s, operating as a Function as a Service (FaaS) solution, empowers developers to integrate their own containerized streaming modules into our K3s cluster. This is accomplished by defining communication patterns within NodeRED. NodeRED has the ability to extract fields and create a TOSCA extension in JSON format, outlining the communication structure and scaling behavior of these modules. The TOSCA description is then processed by the Converter component. This component validates the TOSCA using the TOSCA Sommelier validator. If the TOSCA is found to be valid, the Converter generates corresponding Kubernetes files. It also configures RabbitMQ to facilitate communication between components via streams and sets up KEDA to implement scaling rules linked to RabbitMQ for each component. Additionally, the Instance Manager is configured by Converter, to terminate a scaled pod instance once it has completed its task.",
+"url":"https://github.com/Efficient-Computing-Lab/StreamK3s"},
+{"name":"PEPPER",
+"description":"This repository provides the code for a pipeline is for profiling and partitioning ONNX models, to enhance inference efficiency across heterogeneous hardware platforms. Optimal split points within the deep learning models are identified through the application of Tarjan’s Bridge-Finding Algorithm, and the inference times of the models are predicted per device based on the respective characteristics and CPU load. For the prediction of inference times, the XGBoost algorithm is employed. The effectiveness of the proposed approach is validated through experiments conducted on real-world edge devices, demonstrating that highly efficient and adaptable deployment of complex deep learning models can be achieved in such environments.",
+"url":"https://github.com/Efficient-Computing-Lab/PEPPER"},
+{"name":"Kubeflow MLOps Architecture",
+"description":"This repository introduces an architecture that uses Kubeflow in order to perform MLOps pipelines capable to automate training and storage of models.",
+"url":"https://github.com/Efficient-Computing-Lab/kubeflow-mlops-architecture"},
+{"name": "Energy Profiling",
+"description": "This repository provides an energy profiler based on an MLP model. It takes as input the model specifications together with resource metrics such as current CPU load, disk usage, and device type across a variable number of edge devices. The profiler’s objective is to predict which device in the cluster will result in minimal energy consumption and to deploy the model or models on that optimal device.",
+"url":"https://github.com/Efficient-Computing-Lab/energy-profiling"},
+{"name": "EdgeCloud-Mon",
+"description": "EdgeCloud Mon is a lightweight monitoring tool designed to oversee K3s clusters. It focuses on providing information about hosts (physical or virtual machines) and application components, regardless of their deployment method (K3s pods or Kubevirt virtual machines). This data is crucial for cloud platforms to enhance their orchestration. EdgeCloud Mon uses the Prometheus monitoring system, employing exporters to gather the necessary metrics for monitoring.",
+"url":"https://github.com/Efficient-Computing-Lab/EdgeCloud-Mon"},
+{"name": "CADO",
+"description": "This repository contains an OWL entity that describes the semantics of technologies capable of deploying applications via container orchestration. The main purpose of this OWL entity is to describe the semantics of these technologies in a top-down manner. In this way, the reader will first learn the essential semantics of container orchestration and then become familiar with entities such as Docker and Kubernetes.",
+"url":"https://github.com/Efficient-Computing-Lab/CADO"}
+
 ]
