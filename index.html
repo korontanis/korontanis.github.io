@@ -4,10 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ioannis Korontanis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<nav class="sticky-nav" id="top">
+    <div class="nav-inner">
+        <span class="nav-brand">IK</span>
+        <div class="nav-links">
+            <a href="#bio">Bio</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#repositories">Repositories</a>
+        </div>
+    </div>
+</nav>
+
 <header>
     <div class="custom-header">
         <img src="images/profile.jpg" alt="profile" class="profile">
@@ -18,14 +34,14 @@
                 <li>Junior Researcher at National Technical University of Athens</li>
             </ul>
             <div class="social-media">
-                <p>Social Media</p>
-                <a href="https://www.linkedin.com/in/ioannis-korontanis-520428117/" target="_blank">
+                <p>Social</p>
+                <a href="https://www.linkedin.com/in/ioannis-korontanis-520428117/" target="_blank" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="https://scholar.google.gr/citations?user=ayPpafkAAAAJ&hl=el" target="_blank">
+                <a href="https://scholar.google.gr/citations?user=ayPpafkAAAAJ&hl=el" target="_blank" aria-label="Google Scholar">
                     <i class="fa-brands fa-google-scholar"></i>
                 </a>
-                <a href="https://github.com/korontanis" target="_blank">
+                <a href="https://github.com/korontanis" target="_blank" aria-label="GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </div>
@@ -35,27 +51,27 @@
 
 <main>
     <div class="content">
-        <div class="bio">
+        <div class="bio" id="bio">
             <h2>Bio</h2>
             <p>Ioannis Korontanis (male) is currently a Ph.D. candidate at the <span style="font-style: italic;">Department of Informatics and Telematics of Harokopio University of Athens</span>.
             He received his BSc from <span style="font-style: italic;">the Department of Computer Science and Engineering of Technological Education Institute of Thessaly</span>.
-            He received his MSc <span style="font-style: italic;">“Web Technologies and Applications” at the Department of Informatics and Telematics of Harokopio University of Athens</span>.
-            The topic of his PhD thesis is <span style="font-style: italic;">“Computer Infrastructure Models and Optimal Resource Orchestration”</span>.</p>
+            He received his MSc <span style="font-style: italic;">"Web Technologies and Applications" at the Department of Informatics and Telematics of Harokopio University of Athens</span>.
+            The topic of his PhD thesis is <span style="font-style: italic;">"Computer Infrastructure Models and Optimal Resource Orchestration"</span>.</p>
             <p>Currently, he is working as a Junior Researcher in the <a href="https://ecl.ece.ntua.gr/">Efficient Computing Lab</a> of National Technical University of Athens.
-            His main research interests include distributed and real-time processing, cloud modelling languages & application models in Cloud & Edge, Cloud & Edge monitoring systems, CI/CD, DevOps and MLOps.</p>
+            His main research interests include distributed and real-time processing, cloud modelling languages &amp; application models in Cloud &amp; Edge, Cloud &amp; Edge monitoring systems, CI/CD, DevOps and MLOps.</p>
         </div>
 
-        <div class="eu-projects">
+        <div class="eu-projects" id="projects">
             <h2>EU Projects Participation</h2>
             <ul class="main-diamond-list">
-                <li><span class="project">ACCORDION</span> <span class="date">Jan 2020 - Dec 2022</span></li>
-                <li><span class="project">SmartShip</span> <span class="date">Oct 2021 - Feb 2022</span></li>
-                <li><span class="project">RELEVIUM</span> <span class="date">Mar 2023 - Dec 2024</span></li>
-                <li><span class="project">PANDORA</span> <span class="date">Jul 2024 - Ongoing</span></li>
+                <li><span class="project">ACCORDION</span> <span class="date">Jan 2020 – Dec 2022</span></li>
+                <li><span class="project">SmartShip</span> <span class="date">Oct 2021 – Feb 2022</span></li>
+                <li><span class="project">RELEVIUM</span> <span class="date">Mar 2023 – Dec 2024</span></li>
+                <li><span class="project">PANDORA</span> <span class="date">Jul 2024 – Ongoing</span></li>
             </ul>
         </div>
 
-        <div class="publications">
+        <div class="publications" id="publications">
             <h2>Publications</h2>
             <div class="year-buttons-container">
                 <p>Filter by year:</p>
@@ -63,7 +79,8 @@
             </div>
             <div class="publications-cards"></div>
         </div>
-        <div class="repositories">
+
+        <div class="repositories" id="repositories">
             <h2>Repositories</h2>
             <div class="repositories-cards"></div>
         </div>
@@ -71,7 +88,8 @@
 </main>
 
 <footer>
-    <p>&copy; 2025</p>
+    <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+    <p>&copy; 2025 Ioannis Korontanis</p>
 </footer>
 
 <script src="publications.js"></script>
