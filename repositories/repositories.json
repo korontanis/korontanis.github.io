@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Converter",
+    "description": "Converter is a reasoning tool designed for the cloud language known as CEAML. CEAML is an extension of TOSCA capable to describe deployment and runtime adaptation for platforms that utilize both Cloud and Edge resources. It can parse CEAML entities and translate them into configuration files for K3s or Kubevirt. Additionally, it generates action models, workflow models, and matchmaking models that can simplify deployment and runtime adaptation for distributed orchestrators across multiple K3s clusters. CEAML and Converter have been utilized by the ACCORDION EU project to aid the orchestrator and lifecycle manager of the system.",
+    "url": "https://github.com/Efficient-Computing-Lab/Converter"
+  }
+]
