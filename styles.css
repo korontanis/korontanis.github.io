@@ -132,14 +132,15 @@ header::after {
     50%       { box-shadow: 0 0 0 7px rgba(0,128,128,0.35), 0 0 0 15px rgba(0,128,128,0.12), 0 14px 44px rgba(0,0,0,0.55); }
 }
 
-/* Wrapper carries the animated ring so the <img> renders without compositing artifacts */
+/* Wrapper clips the image with overflow:hidden — cleaner circle than border-radius on <img> */
 .profile-wrapper {
     position: relative;
     width: 155px;
     height: 155px;
     flex-shrink: 0;
     border-radius: 50%;
-    border: 4px solid #008080;
+    border: 6px solid #008080;
+    overflow: hidden;
     animation: ringPulse 3.5s ease-in-out infinite;
     transition: transform 0.35s ease;
 }
@@ -152,7 +153,6 @@ header::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
     display: block;
 }
 
