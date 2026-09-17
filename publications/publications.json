@@ -286,5 +286,20 @@
     "pages": "1-6",
     "year": 2025,
     "publisher": "ACM"
+  },
+  {
+    "type": "inproceedings",
+    "citation_key": "10.1109/MDM71479.2026.00094",
+    "title": "Enabling Adversarial Robustness in AI Models Through Kubeflow MLOps",
+    "author": [
+      "Bouras Stavros",
+      "Korontanis Ioannis",
+      "Makris Antonios",
+      "Tserpes Konstantinos"
+    ],
+    "conference": "2026 27th IEEE International Conference on Mobile Data Management (MDM)",
+    "pages": "558--563",
+    "year": 2026,
+    "organization": "IEEE"
   }
 ]
